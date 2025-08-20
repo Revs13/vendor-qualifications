@@ -22,6 +22,17 @@ The `VendorRanker` project is designed to help users discover and rank software 
 - Vendor ranking based on a combination of similarity and normalized rating.
 - JSON-safe output for potential API integration.
 
+## Repository Structure
+- requirements.txt - Contains all requirements necessary to run this code.
+- data 
+   |
+    - vendors.csv - The CSV file containing vendor information like name, category, and features/capabilities.
+- app
+   |
+    - main.py - Dictates which ranker functions are called based on API endpoint.
+   |
+    - vendor_ranker.py - Contains functions for ranking input CSV of vendors.
+
 ## How to Use
 
 ```python
