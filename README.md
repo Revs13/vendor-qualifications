@@ -14,8 +14,6 @@ The goal of this project was to develop a system to rank software vendors based 
 - Compute feature similarity scores and rank vendors accordingly.
 - Combine feature similarity and vendor rating to calculate a final score.
 
-> ⚠️ Note: This project is a prototype and may not fully handle all datasets or edge cases yet.
-
 ## Key Features Implemented
 
 - CSV ingestion and preprocessing for key columns: `product_name`, `main_category`, `Features`, `rating`.
