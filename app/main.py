@@ -6,7 +6,7 @@ from .vendor_ranker import VendorRanker
 app = FastAPI(title="Vendor Qualification API")
 
 # Initialize ranker once
-ranker = VendorRanker("/Users/reva/Downloads/G2 software - CRM Category Product Overviews (1).csv")
+ranker = VendorRanker("data/vendors.csv")
 
 class RankRequest(BaseModel):
     software_category: str

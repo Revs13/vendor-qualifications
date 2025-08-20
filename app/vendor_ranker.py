@@ -4,7 +4,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import os
 
 class VendorRanker:
-    def __init__(self, csv_path="/Users/reva/Downloads/G2 software - CRM Category Product Overviews (1).csv"):
+    def __init__(self, csv_path="data/vendors.csv"):
         # Load CSV
         if not os.path.exists(csv_path):
             raise FileNotFoundError(f"CSV not found at {csv_path}")
@@ -45,7 +45,7 @@ class VendorRanker:
         query_text = " ".join(capabilities)
         query_vec = self.vectorizer.transform([query_text])
 
-        # Compute cosine similarity
+        # Calculate cosine similarity
         #subset_idx = subset.index
         subset_feature_matrix = self.vectorizer.transform(subset["Features"])
         sims = cosine_similarity(subset_feature_matrix, query_vec).flatten()
